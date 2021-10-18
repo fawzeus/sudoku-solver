@@ -24,9 +24,9 @@ def read_item(image_path: str):
 
 @app.post("/")
 async def root(image:UploadFile = File(...)):
-    buffer= open("./images/to_solve.jpg", "wb")
+    buffer= open("./temp/to_solve.jpg", "wb")
     shutil.copyfileobj(image.file, buffer)
     buffer.close()
-    im =  solve("./images/to_solve.jpg")
+    im =  solve("./temp/to_solve.jpg")
     res, im_png = cv2.imencode(".png", im)
     return StreamingResponse(io.BytesIO(im_png.tobytes()), media_type="image/png")
