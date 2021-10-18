@@ -1,6 +1,5 @@
 from fastapi import FastAPI,UploadFile,File,Request,Body
 from solver import solve
-import uvicorn
 import shutil
 from fastapi import FastAPI, Request
 from fastapi.staticfiles import StaticFiles
