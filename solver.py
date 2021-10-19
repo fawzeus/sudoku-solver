@@ -7,7 +7,6 @@ import numpy as np
 import imutils
 import cv2
 from sudoku import Sudoku
-
 def solve(image_path):
 
     # load the digit classifier from disk
@@ -93,7 +92,8 @@ def solve(image_path):
     # show the output image
     #cv2.imshow("SOLVED Sudoku", puzzleImage)
     #cv2.imshow("original Image",out)
-    #cv2.waitKey(0)
+
+    
     return puzzleImage
 
 #solve("images/sudoku_puzzle.jpg")

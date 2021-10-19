@@ -7,11 +7,16 @@
     />
   </head>
   <body>
-    <h1>welcome to soduko solver!</h1>
+    <h1>Welcome to sudoku solver!</h1>
     <div id="about">
       <p>
-        this project is based on digits classifier model to solve puzzles
-        problems
+        This is an automatic sudoku solver using OpenCV and Deep learning, we use a digits classifier to 
+        get the puzzle then solve it in 5 steps :</p>
+        <p>1: Read the image containing the Sudoku puzzle provided by the user (must be a 9X9 sudoku image)</p>
+          <p>2: Locate the puzzle board and extract it</p>
+            <p>3: Locate each of the cells of the Sudoku board and read the digit if exist </p>
+              <p>4: Apply the sudoku solver algorithm</p>
+                <p>5: Write answer digits and display the output image</p>
       </p>
     </div>
     <div id="copyrights">
