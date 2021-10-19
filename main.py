@@ -17,18 +17,16 @@ app.mount("/static", StaticFiles(directory="static"), name="static")
 @app.get("/")
 def read_root(request:Request):
     return templates.TemplateResponse("home.html",{"request":request})
-"""@app.get("/image/{image_path}")
-def read_item(image_path: str):
-   solve(image_path)"""
+
 
 @app.post("/")
 async def root(image:UploadFile = File(...)):
     buffer= open("./temp/to_solve.jpg", "wb")
     shutil.copyfileobj(image.file, buffer)
     buffer.close()
-    image=cv2.imread("./temp/to_solve.jpg")
+    #image=cv2.imread("./temp/to_solve.jpg")
     #cv2.imshow("Original Image",image)
     #cv2.waitKey(0)
     im =  solve("./temp/to_solve.jpg")
     res, im_png = cv2.imencode(".png", im)
-    return StreamingResponse(io.BytesIO(im_png.tobytes()), media_type="image/png")
+    return StreamingResponse(StreamingResponse(io.BytesIO(im_png.tobytes()), media_type="image/png"))
