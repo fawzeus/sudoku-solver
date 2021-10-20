@@ -29,4 +29,4 @@ async def root(image:UploadFile = File(...)):
     #cv2.waitKey(0)
     im =  solve("./temp/to_solve.jpg")
     res, im_png = cv2.imencode(".png", im)
-    return StreamingResponse(StreamingResponse(io.BytesIO(im_png.tobytes()), media_type="image/png"))
+    return StreamingResponse(io.BytesIO(im_png.tobytes()), media_type="image/png")
