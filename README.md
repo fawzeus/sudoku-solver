@@ -11,4 +11,4 @@ we use a digits classifier to get the puzzle then solve it in 5 steps :
 * Write the answer digits and display the output image
  
 
-[![Sudoku Solver Screen Shot][sudoku solver]](https://github.com/fawzirjili/sudoku-solver/blob/main/Sans%20titre.png?raw=true)
+![N|Sudoku Solver](https://github.com/fawzirjili/sudoku-solver/blob/main/Sans%20titre.png?raw=true)
