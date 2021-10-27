@@ -1,2 +1,4 @@
-apt-get update
-apt-get install ffmpeg libsm6 libxext6  -y
+libsm6
+libxrender1
+libfontconfig1
+libice6
