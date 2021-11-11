@@ -12,3 +12,6 @@ we use a digits classifier to get the puzzle then solve it in 5 steps :
  
 
 ![N|Sudoku Solver](https://github.com/fawzirjili/sudoku-solver/blob/main/Sans%20titre.png?raw=true)
+
+## Demo
+https://www.youtube.com/watch?v=FXLoTUvDVPY&t=1s
